@@ -110,15 +110,15 @@ def _setup_ubuntu():
     shared_sources = _setup_deb_general()
     # package information. This is ubuntu/debian based and could be generalized.
     sources = [
-      "deb http://us.archive.ubuntu.com/ubuntu/ %s universe",  # unsupported repos
-      "deb http://us.archive.ubuntu.com/ubuntu/ %s multiverse",
-      "deb http://us.archive.ubuntu.com/ubuntu/ %s-updates universe",
-      "deb http://us.archive.ubuntu.com/ubuntu/ %s-updates multiverse",
-      "deb http://archive.canonical.com/ubuntu %s partner",  # partner repositories
-      "deb http://cran.fhcrc.org/bin/linux/ubuntu %s/",  # lastest R versions
-      "deb http://archive.canonical.com/ubuntu %s partner",  # sun-java
-      "deb http://ppa.launchpad.net/nebc/bio-linux/ubuntu trusty main",  # Bio-Linux
-      "deb [arch=amd64 trusted=yes] http://research.cs.wisc.edu/htcondor/debian/stable/ squeeze contrib"  # HTCondor
+      "deb http://mirrors.science.unimelb.edu.au/ubuntu-archive/ubuntu/ %s universe",  # unsupported repos
+      "deb http://mirrors.science.unimelb.edu.au/ubuntu-archive/ubuntu/ %s multiverse",
+      "deb http://mirrors.science.unimelb.edu.au/ubuntu-archive/ubuntu/ %s-updates universe",
+      "deb http://mirrors.science.unimelb.edu.au/ubuntu-archive/ubuntu/ %s-updates multiverse",
+      "deb http://mirrors.science.unimelb.edu.au/ubuntu-partner/ubuntu %s partner",  # partner repositories
+      "deb http://cran.ms.unimelb.edu.au/bin/linux/ubuntu/ %s/",  # lastest R versions
+      "deb http://mirrors.science.unimelb.edu.au/ubuntu-partner/ubuntu %s partner",  # sun-java
+      "deb http://mirrors.science.unimelb.edu.au/bio-linux/ubuntu/ trusty main",  # Bio-Linux
+      "deb [arch=amd64 trusted=yes] http://research.cs.wisc.edu/htcondor/debian/stable/ wheezy contrib"  # HTCondor
     ] + shared_sources
     env.std_sources = _add_source_versions(env.dist_name, sources)
 
